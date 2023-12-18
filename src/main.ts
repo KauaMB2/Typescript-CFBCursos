@@ -1,6 +1,7 @@
-let nome:string
-nome="Kauã"
-let valor:number
-valor=0.5
-console.log(0.5)
-console.log(nome)
+let vteste:string|number//It can receive strings and numbers
+vteste="Bruno"
+console.log(vteste)
+vteste=2024
+console.log(vteste)
+let array=["Javascript", true, 100]
+console.log(array)
