@@ -1,6 +1,6 @@
-const nome="Kauã"
-const canal="CFB Cursos"
-const curso="Typescript"
-
+let nome:string
+nome="Kauã"
+let valor:number
+valor=0.5
+console.log(0.5)
 console.log(nome)
-console.log(curso)
