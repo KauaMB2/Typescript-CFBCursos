@@ -1,10 +1,12 @@
-let coisas:[string, number, boolean]=["Corda", 1, true]
-console.log(coisas)
-coisas[2]=false
-console.log(coisas)
-console.log(coisas[2])
-
-console.log("Read only: ")
-let coisas2:readonly[string, number, boolean]=["Corda", 1, true]
-console.log(coisas2)
-console.log(coisas2[2])
+let dados={
+    nome: "Kauã",
+    idade: 25,
+    status: "A",
+    comprimento:(nome:string)=>{console.log("Olá, "+nome+"!")}
+}
+console.log(typeof(dados))
+console.log(dados)
+console.log(dados.nome)
+dados.nome="João"
+console.log(dados.nome)
+dados.comprimento("João")

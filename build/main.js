@@ -1,10 +1,13 @@
 "use strict";
-let coisas = ["Corda", 1, true];
-console.log(coisas);
-coisas[2] = false;
-console.log(coisas);
-console.log(coisas[2]);
-console.log("Read only: ");
-let coisas2 = ["Corda", 1, true];
-console.log(coisas2);
-console.log(coisas2[2]);
+let dados = {
+    nome: "Kauã",
+    idade: 25,
+    status: "A",
+    comprimento: (nome) => { console.log("Olá, " + nome + "!"); }
+};
+console.log(typeof (dados));
+console.log(dados);
+console.log(dados.nome);
+dados.nome = "João";
+console.log(dados.nome);
+dados.comprimento("João");
