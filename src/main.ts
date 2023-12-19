@@ -1,10 +1,15 @@
-let vnome:string|null
-vnome=null
-console.log(vnome)
+let nvalor:number
+let svalor:string
+let uvalor:unknown
 
-let vnome2:any
-console.log(vnome2)
+uvalor=10
+svalor=<string>uvalor
+nvalor=+10
+nvalor=<number>uvalor
+svalor=nvalor.toString()
+console.log(typeof(svalor))
 
-let vnome3:unknown=10//UNKNOWN Só pode ser atribuido em tipos unknow ou any
-let vnum:any=vnome3
-console.log(vnome3)
+// console.log(typeof(uvalor))
+// console.log(nvalor)
+// console.log(typeof(svalor))
+// console.log(svalor)

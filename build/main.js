@@ -1,9 +1,14 @@
 "use strict";
-let vnome;
-vnome = null;
-console.log(vnome);
-let vnome2;
-console.log(vnome2);
-let vnome3 = 10; //UNKNOWN Só pode ser atribuido em tipos unknow ou any
-let vnum = vnome3;
-console.log(vnome3);
+let nvalor;
+let svalor;
+let uvalor;
+uvalor = 10;
+svalor = uvalor;
+nvalor = +10;
+nvalor = uvalor;
+svalor = nvalor.toString();
+console.log(typeof (svalor));
+// console.log(typeof(uvalor))
+// console.log(nvalor)
+// console.log(typeof(svalor))
+// console.log(svalor)
