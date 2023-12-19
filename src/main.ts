@@ -1,16 +1,10 @@
-enum dias{
-    domingo=0,
-    segunda=1,
-    terca=2,
-    quarta=3,
-    quinta=4,
-    sexta=5,
-    sabado=6
-}
-console.log(dias["domingo"])
-console.log(dias.domingo)
-console.log(dias[1])
-const d=new Date()
-console.log(d.getDate())
-console.log(dias[d.getDay()])
+let vnome:string|null
+vnome=null
+console.log(vnome)
 
+let vnome2:any
+console.log(vnome2)
+
+let vnome3:unknown=10//UNKNOWN Só pode ser atribuido em tipos unknow ou any
+let vnum:any=vnome3
+console.log(vnome3)
