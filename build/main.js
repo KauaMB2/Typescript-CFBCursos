@@ -1,13 +1,17 @@
 "use strict";
-let dados = {
-    nome: "Kauã",
-    idade: 25,
-    status: "A",
-    comprimento: (nome) => { console.log("Olá, " + nome + "!"); }
-};
-console.log(typeof (dados));
-console.log(dados);
-console.log(dados.nome);
-dados.nome = "João";
-console.log(dados.nome);
-dados.comprimento("João");
+var dias;
+(function (dias) {
+    dias[dias["domingo"] = 0] = "domingo";
+    dias[dias["segunda"] = 1] = "segunda";
+    dias[dias["terca"] = 2] = "terca";
+    dias[dias["quarta"] = 3] = "quarta";
+    dias[dias["quinta"] = 4] = "quinta";
+    dias[dias["sexta"] = 5] = "sexta";
+    dias[dias["sabado"] = 6] = "sabado";
+})(dias || (dias = {}));
+console.log(dias["domingo"]);
+console.log(dias.domingo);
+console.log(dias[1]);
+const d = new Date();
+console.log(d.getDate());
+console.log(dias[d.getDay()]);
