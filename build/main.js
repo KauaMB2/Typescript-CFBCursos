@@ -1,14 +1,10 @@
 "use strict";
-let nvalor;
-let svalor;
-let uvalor;
-uvalor = 10;
-svalor = uvalor;
-nvalor = +10;
-nvalor = uvalor;
-svalor = nvalor.toString();
-console.log(typeof (svalor));
-// console.log(typeof(uvalor))
-// console.log(nvalor)
-// console.log(typeof(svalor))
-// console.log(svalor)
+function teste(user, pass) {
+    console.log(`User: ${user} - Password: ${pass}`);
+}
+teste("Kauã", "1235");
+function soma(n1, n2) {
+    return n1 + n2;
+}
+console.log(soma(1, 2));
+console.log(soma(1, 2).toString());
