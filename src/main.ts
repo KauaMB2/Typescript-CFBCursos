@@ -1,11 +1,14 @@
-function soma(n1:number=0, n2:number=0):number{
-    return n1+n2
+const teste=(txt?:string):void=>{
+    console.log(`Nome: ${txt}`)
 }
-console.log(soma(5))
-
-function novoUser(user:string,pass:string,nome?:string):void{
-    let dados={user,pass,nome}
-    console.log(dados)
+const fsoma2=(n:number[]):number=>{
+    let s:number=0
+    n.forEach((e)=>{
+        s+=e
+    })
+    return s
 }
 
-novoUser("Kauã","12345")
+teste("Kauã")
+teste()
+console.log(fsoma2([1,2,3,4,5]))
