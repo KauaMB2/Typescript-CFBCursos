@@ -1,10 +1,10 @@
 "use strict";
-function teste(user, pass) {
-    console.log(`User: ${user} - Password: ${pass}`);
-}
-teste("Kauã", "1235");
-function soma(n1, n2) {
+function soma(n1 = 0, n2 = 0) {
     return n1 + n2;
 }
-console.log(soma(1, 2));
-console.log(soma(1, 2).toString());
+console.log(soma(5));
+function novoUser(user, pass, nome) {
+    let dados = { user, pass, nome };
+    console.log(dados);
+}
+novoUser("Kauã", "12345");

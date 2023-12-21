@@ -1,11 +1,11 @@
-function teste(user:string, pass:string):void{
-    console.log(`User: ${user} - Password: ${pass}`)
-}
-teste("Kauã","1235")
-
-function soma(n1:number, n2:number):number{
+function soma(n1:number=0, n2:number=0):number{
     return n1+n2
 }
+console.log(soma(5))
 
-console.log(soma(1,2))
-console.log(soma(1,2).toString())
+function novoUser(user:string,pass:string,nome?:string):void{
+    let dados={user,pass,nome}
+    console.log(dados)
+}
+
+novoUser("Kauã","12345")
