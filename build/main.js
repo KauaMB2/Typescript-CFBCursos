@@ -1,9 +1,13 @@
 "use strict";
-function fsoma(...n) {
-    let s = 0;
-    n.forEach((en) => {
-        s += en;
-    });
-    return s;
+class Computador {
+    nome = "void";
+    ram = 0;
+    cpu = 0;
+    ligado = false;
 }
-console.log(fsoma(10, 20, 30));
+const c1 = new Computador();
+const c2 = new Computador();
+const c3 = new Computador();
+console.log(c1.nome);
+c1.nome = "Lenovo T430";
+console.log(c1.nome);
