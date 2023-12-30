@@ -1,9 +1,11 @@
 class Conta{
     protected numero:number
     protected titular:String
+    private saldoConta:number
     constructor(titular:string){
         this.numero=this.gerarNumeroConta()
         this.titular=titular
+        this.saldoConta=0
     }
     public gerarNumeroConta():number{
         return Math.floor(Math.random()*100000)+1
@@ -11,7 +13,23 @@ class Conta{
     protected info():void{
         console.log(`Titular: ${this.titular}`)
         console.log(`Número: ${this.numero}`)
-        console.log("------------------------------")
+    }
+    public saldo():number{
+        return this.saldoConta
+    }
+    public deposito(valor:number){
+        if(valor>1000){
+            console.log("Valor de depósito muito grande.")
+        }else{
+            this.saldoConta+=valor
+        }
+    }
+    protected saque(valor: number){
+        if(valor >= this.saldoConta){
+            this.saldoConta-=valor
+        }else{
+            console.log("Saldo insuficiente.")
+        }
     }
 }
 class ContaPF extends Conta{//ContaPF herda metodos e propriedades de Conta
@@ -20,7 +38,11 @@ class ContaPF extends Conta{//ContaPF herda metodos e propriedades de Conta
         super(titular)//Pasa para a classe pai
         this.cpf=cpf
         console.log(`Conta PF criada: ${titular}`)
-        this.info()
+    }
+    public info():void{
+        super.info()
+        console.log(`CPF: ${this.cpf}`)
+        console.log("-----------------------")
     }
 }
 class ContaPJ extends Conta{//ContaPJ herda metodos e propriedades de Conta
@@ -31,9 +53,15 @@ class ContaPJ extends Conta{//ContaPJ herda metodos e propriedades de Conta
         console.log(`Conta PJ criada: ${titular}`)
         this.info()
     }
+    
+    public info():void{
+        super.info()
+        console.log(`CPF: ${this.cnpj}`)
+        console.log("-----------------------")
+    }
 }
 
 const c1= new ContaPJ(123456, "CFB Cursos")
+console.log(c1.info())
 
-//console.log(c1.numero)
 
