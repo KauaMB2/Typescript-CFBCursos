@@ -11,11 +11,23 @@ class Computador {
         this.ligado = false;
         console.log(`Computador ${this.nome} criado`);
     }
+    info() {
+        console.log(`Nome: ${this.nome}`);
+        console.log(`RAM: ${this.ram}`);
+        console.log(`CPU: ${this.cpu}`);
+        console.log(`Ligado: ${this.ligado ? "Sim" : "Não"}`);
+    }
+    ligar() {
+        this.ligado = true;
+    }
+    desligar() {
+        this.ligado = false;
+    }
 }
 //Instanciando o objeto
 const c1 = new Computador("Rapidão", 64, 10);
 const c2 = new Computador("Carão", 32, 5);
 const c3 = new Computador("Gamer", 128, 10);
-console.log(c1.nome);
 c1.nome = "Lenovo T430";
-console.log(c1.nome);
+c1.ligado = true;
+c1.info();
