@@ -1,13 +1,21 @@
 "use strict";
 class Computador {
-    nome = "void";
-    ram = 0;
-    cpu = 0;
-    ligado = false;
+    nome;
+    ram;
+    cpu;
+    ligado;
+    constructor(n, ram, cpu) {
+        this.nome = n;
+        this.ram = ram;
+        this.cpu = cpu;
+        this.ligado = false;
+        console.log(`Computador ${this.nome} criado`);
+    }
 }
-const c1 = new Computador();
-const c2 = new Computador();
-const c3 = new Computador();
+//Instanciando o objeto
+const c1 = new Computador("Rapidão", 64, 10);
+const c2 = new Computador("Carão", 32, 5);
+const c3 = new Computador("Gamer", 128, 10);
 console.log(c1.nome);
 c1.nome = "Lenovo T430";
 console.log(c1.nome);
