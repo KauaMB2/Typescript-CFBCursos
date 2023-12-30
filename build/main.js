@@ -15,8 +15,11 @@ class Conta {
         console.log(`Titular: ${this.titular}`);
         console.log(`Número: ${this.numero}`);
     }
-    saldo() {
+    get saldo() {
         return this.saldoConta;
+    }
+    set saldo(novoSaldo) {
+        this.saldoConta = novoSaldo;
     }
     deposito(valor) {
         if (valor > 1000) {
@@ -63,4 +66,5 @@ class ContaPJ extends Conta {
     }
 }
 const c1 = new ContaPJ(123456, "CFB Cursos");
-console.log(c1.info());
+c1.info();
+console.log(c1.saldo);
