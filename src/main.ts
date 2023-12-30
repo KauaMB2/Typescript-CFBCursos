@@ -1,4 +1,4 @@
-class Conta{
+abstract class Conta{
     protected numero:number
     protected titular:String
     private saldoConta:number
@@ -56,7 +56,6 @@ class ContaPJ extends Conta{//ContaPJ herda metodos e propriedades de Conta
         console.log(`Conta PJ criada: ${titular}`)
         this.info()
     }
-    
     public info():void{
         super.info()
         console.log(`CPF: ${this.cnpj}`)
