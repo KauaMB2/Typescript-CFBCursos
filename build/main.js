@@ -1,70 +1,17 @@
 "use strict";
-class Conta {
-    numero;
-    titular;
-    saldoConta;
-    constructor(titular) {
-        this.numero = this.gerarNumeroConta();
-        this.titular = titular;
-        this.saldoConta = 0;
-    }
-    gerarNumeroConta() {
-        return Math.floor(Math.random() * 100000) + 1;
-    }
-    info() {
-        console.log(`Titular: ${this.titular}`);
-        console.log(`Número: ${this.numero}`);
-    }
-    get saldo() {
-        return this.saldoConta;
-    }
-    set saldo(novoSaldo) {
-        this.saldoConta = novoSaldo;
-    }
-    deposito(valor) {
-        if (valor > 1000) {
-            console.log("Valor de depósito muito grande.");
-        }
-        else {
-            this.saldoConta += valor;
-        }
-    }
-    saque(valor) {
-        if (valor >= this.saldoConta) {
-            this.saldoConta -= valor;
-        }
-        else {
-            console.log("Saldo insuficiente.");
-        }
-    }
-}
-class ContaPF extends Conta {
-    cpf;
-    constructor(cpf, titular) {
-        super(titular); //Pasa para a classe pai
-        this.cpf = cpf;
-        console.log(`Conta PF criada: ${titular}`);
-    }
-    info() {
-        super.info();
-        console.log(`CPF: ${this.cpf}`);
-        console.log("-----------------------");
-    }
-}
-class ContaPJ extends Conta {
-    cnpj;
-    constructor(cnpj, titular) {
-        super(titular); //Pasa para a classe pai
-        this.cnpj = cnpj;
-        console.log(`Conta PJ criada: ${titular}`);
-        this.info();
-    }
-    info() {
-        super.info();
-        console.log(`CPF: ${this.cnpj}`);
-        console.log("-----------------------");
-    }
-}
-const c1 = new ContaPJ(123456, "CFB Cursos");
-c1.info();
-console.log(c1.saldo);
+let curso1;
+let curso2;
+curso1 = {
+    titulo: "Typescript",
+    des: "Curso de Typescript",
+    aula: 100,
+    maxAlunos: 50
+};
+curso2 = {
+    titulo: "Javascript",
+    des: "Curso de Javascript",
+    aula: 100,
+};
+console.log(curso1);
+console.log(curso2);
+console.log(typeof (curso1));
