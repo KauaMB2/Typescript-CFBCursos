@@ -1,21 +1,14 @@
 "use strict";
-function iniciarCurso(t) {
-    console.log(t);
+function f_teste(v, r) {
+    return { 1: v, 2: r };
 }
-let curso1;
-let curso2;
-curso1 = {
-    titulo: "Typescript",
-    des: "Curso de Typescript",
-    aula: 100,
-    maxAlunos: 50,
-    iniciarCurso: iniciarCurso
-};
-curso2 = {
-    titulo: "Javascript",
-    des: "Curso de Javascript",
-    aula: 100,
-};
-console.log(curso1);
-console.log(curso2);
-console.log(typeof (curso1));
+console.log(f_teste(10, "10"));
+console.log(f_teste("10", 10));
+class C_teste {
+    valor;
+    constructor(valor) {
+        this.valor = valor;
+    }
+}
+const ct1 = new C_teste("10");
+console.log(ct1.valor);
